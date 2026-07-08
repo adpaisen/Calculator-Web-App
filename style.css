@@ -12,9 +12,9 @@ body {
     align-items: center;
     height: 100dvh;
     overflow: hidden;
+    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.3s;
-    padding: 10px;
 }
 
 /* Themes */
@@ -98,12 +98,12 @@ input:checked + .slider:before {
 #display {
     width: 100%;
     height: 60px;
+    font-size: 28px;
+    text-align: right;
+    padding: 10px;
     border: none;
     border-radius: 10px;
     background: #eaeaea;
-    padding: 10px;
-    text-align: right;
-    font-size: 28px;
     margin-bottom: 15px;
 }
 
@@ -119,15 +119,15 @@ input:checked + .slider:before {
     gap: 8px;
 }
 
-/* Buttons */
+/* General Buttons */
 button {
     width: 100%;
-    aspect-ratio: 1;
+    height: 68px;
     border: none;
     border-radius: 10px;
+    font-size: 22px;
     background: #e0e0e0;
     cursor: pointer;
-    font-size: 22px;
     transition: 0.2s;
 }
 
@@ -144,6 +144,17 @@ button:hover {
     background: #555;
 }
 
+/* Clear & Backspace */
+.clear {
+    background: #ff5c5c;
+    color: white;
+    font-weight: bold;
+}
+
+.clear:hover {
+    background: #e04848;
+}
+
 /* Operators */
 .operator {
     background: #ffb84d;
@@ -154,7 +165,7 @@ button:hover {
     background: #ffa726;
 }
 
-/* Equal */
+/* Equal Button */
 .equal {
     background: #4caf50;
     color: white;
@@ -165,47 +176,32 @@ button:hover {
     background: #43a047;
 }
 
-/* Clear */
-.clear {
-    width: 100%;
-    height: 50px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 10px;
-    background: #ff5c5c;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+/* Disabled Button */
+button:disabled {
+    background: #e0e0e0;
+    cursor: default;
 }
 
-.clear:hover {
-    background: #e04848;
+.dark button:disabled {
+    background: #444;
 }
 
-/* Top Row */
-button.top-row {
-    background: #ff8c42;
-    color: white;
-}
-
-button.top-row:hover {
-    background: #ff9933;
-}
+/* Responsive */
 
 /* Tablets */
 @media (max-width: 768px) {
     .calculator {
-        width: 95vw;
-        max-width: 340px;
-    }
-
-    #display {
-        height: 55px;
-        font-size: 26px;
+        width: min(95vw, 340px);
     }
 
     button {
+        height: 64px;
         font-size: 20px;
+    }
+
+    #display {
+        height: 56px;
+        font-size: 26px;
     }
 }
 
@@ -240,13 +236,8 @@ button.top-row:hover {
     }
 
     button {
+        height: 58px;
         font-size: 18px;
-    }
-
-    .clear {
-        height: 45px;
-        font-size: 16px;
-        margin-top: 8px;
     }
 }
 
@@ -258,7 +249,7 @@ button.top-row:hover {
     }
 
     #display {
-        height: 45px;
+        height: 46px;
         font-size: 22px;
     }
 
@@ -267,11 +258,7 @@ button.top-row:hover {
     }
 
     button {
+        height: 54px;
         font-size: 16px;
-    }
-
-    .clear {
-        height: 42px;
-        font-size: 15px;
     }
 }

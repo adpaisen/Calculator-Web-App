@@ -20,6 +20,3 @@
     - Backspace Button: (⌫)
     - Escape Button: Clear Display
 - Responsive Deisgn: Works well on both mobile and desktop
-
-# Credits 📝
-- Inspired by the Redmi 12 Calculator App.
